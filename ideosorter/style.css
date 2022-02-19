@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+html {
+    font-family: 'Jost', sans-serif;
+    background-color: #DDD;
+    color: #000;
+    display: grid;
+    margin: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #333 #CCC;
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #CCC;
+}
+::-webkit-scrollbar-thumb {
+  border: 2px solid #CCC;
+  width: 10px;
+  background-color: #222;
+  border-radius: 20px;
+}
+body {
+    margin: 0 auto;
+    width: 80%;
+    justify-items: center;
+    align-items: center;
+}
+h1 {
+    font-size: 5em;
+    text-align: center;
+}
+h2 {
+    font-size: 3.5em;
+}
+p {
+    font-size: 1.5em;
+}
+select, option {
+    background-color: #FFF;
+    font-size: 1em;
+    color: #000;
+    font-family: inherit;
+    border: 0;
+    border-radius: 1em;
+    padding:10px;
+    margin-top: 2em
+}
+button {
+    background-color: #2196f3;
+    color: #DDD;
+    font-family: inherit;
+    font-size: 2em;
+    width: 30%;
+    min-width: 400px;
+    padding: 0.3em;
+    border: 0;
+    border-radius: 10px;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+/*quiz.html*/
+#question {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFF;
+    font-size: 3em;
+    max-width: 80%;
+    height: 200px;
+    max-height: 100%;
+    margin: 1em auto;
+    padding: 1em;
+    border-radius: 0.5em;
+    text-align: center;
+}
+#back_button {
+    background-color: #333;
+    font-size: 1.5em;
+    width: 10%;
+    min-width: 180px;
+}
+.button {
+  margin: 0.5em auto;
+}
+
+/*Results.html*/
+#results_title {
+  margin-bottom: 0px;
+}
+#image {
+    display: block;
+    margin: 2% auto;
+    max-width: 50%;
+    height: auto;
+    border-radius: 2em;
+}
+#result {
+    font-size: 3em;
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+#desc {
+    font-size: 1.5em;
+    width: 65%;
+    margin: auto;
+    text-align: center;
+}
+#indexbutton, #creditsbutton {
+  max-width: 80%;
+  width: 30%;
+  min-width: 400px;
+  margin: 0.8em auto;
+  font-size: 2em;
+}
+
+/*Github Corner*/
+.github-corner {
+  fill: #222;
+}
+.github-corner .octo-arm, .github-corner .octo-body {
+  fill: #DDD;
+}
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  20%, 60% {
+    transform: rotate(-25deg);
+  }
+  40%, 80% {
+    transform: rotate(10deg);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+    html{
+        background-color: #222;
+        color: #FFF;
+        scrollbar-color: #DDD #333;
+    }
+    ::-webkit-scrollbar-track {
+      background: #222;
+    }
+    ::-webkit-scrollbar-thumb {
+      border: 2px solid #222;
+      background-color: #CCC;
+    }
+    select, option {
+        background-color: #000;
+        color: #FFF;
+    }
+    #question {
+        background-color: #000;
+    }
+    a {
+      color:#2196f3
+    }
+    a:link {
+      color:#2196f3
+    }
+    a:visited {
+      color: darkviolet;
+    }
+    .github-corner {
+      fill: #DDD;
+    }
+    .github-corner .octo-arm, .github-corner .octo-body {
+      fill: #222;
+    }
+}
+
+@media screen and (max-width: 800px) {
+  html {
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle; 
+  }
+  body{
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  h1 {
+    font-size: 12vw;
+  }
+  #quiz_title {
+    font-size: 10vw;
+  }
+  #results_title {
+    font-size: 8vw;
+  }
+  h2 {
+    font-size: 8vw;
+  }
+  p {
+    font-size: 5vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+  select {
+    margin: 2 auto;
+  }
+  #startbutton, #indexbutton, #creditsbutton, #returnbutton {
+    max-width: 80%;
+    width: 80%;
+    min-width: 80%;
+    margin: 0.8em auto;
+    font-size: 6vw;
+  }
+  #startbutton {
+    font-size: 6vw;
+  }
+  #buttonholder{
+    margin: 0 auto;
+    width: 100%;
+  }
+  .button {
+    font-size: 6vw;
+    width: 80%;
+    min-width: 0px;
+  }
+  #back_button {
+    min-width: 40%;
+  }
+  #question{
+    padding: 2vw;
+    border: 1vw;
+    margin: 0 auto;
+    margin-bottom: 8vw;
+    font-size: 7vw;
+    max-height: 50%;
+    min-height: 10%;
+    height: 25%;
+  }
+  #back_button{
+    font-size: 5vw;
+  }
+  #image {
+    max-width: 80%;
+  }
+  #result {
+    font-size: 8vw;
+  }
+  #desc {
+    font-size: 5vw;
+    width: 80%;
+  }
+  .github-corner:hover .octo-arm {
+    animation: none;
+  }
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+}
