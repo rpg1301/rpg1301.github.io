@@ -1,0 +1,221 @@
+/* 电脑响应式 */
+
+@media screen and (min-width: 769px) {
+    .z {
+        border-left: 1px solid #e8e7e3;
+        border-top: 1px solid #e8e7e3;
+        border-bottom: 1px solid #e8e7e3;
+        background-color: #ffffff;
+        width: 25%;
+        padding: 15px 25px;
+        float: left;
+    }
+    .y {
+        border: 1px solid #e8e7e3;
+        background-color: #ffffff;
+        width: 75%;
+        padding: 15px 25px;
+        float: left;
+    }
+    .z ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .z ul li {
+        border: 1px solid #039bce;
+        padding: 0px;
+        margin-bottom: 8px;
+        background-color: #33b5e5;
+        color: #f3f3f3;
+    }
+    .z ul li a {
+        color: #f3f3f3;
+        display: block;
+        padding: 10px;
+    }
+    .z ul li:hover,
+    .z ul li:active {
+        background-color: #0099cc;
+    }
+    .z ul li a:hover,
+    .z ul li a:active {
+        color: #ffffff;
+    }
+    .yejiao {
+        margin: 0px 12px 12px 12px;
+        text-align: center;
+        border: 1px solid #e8e7e3;
+        background-color: white;
+        padding: 10px;
+    }
+    .xs {
+        opacity: 0;
+    }
+}
+
+
+/* 比较大的平板电脑响应式 */
+
+@media screen and (min-width: 532px) and (max-width: 768px) {
+    .z {
+        border-left: 1px solid #e8e7e3;
+        border-top: 1px solid #e8e7e3;
+        border-bottom: 1px solid #e8e7e3;
+        background-color: #ffffff;
+        width: 25%;
+        padding: 10px 15px;
+        float: left;
+    }
+    .y {
+        border: 1px solid #e8e7e3;
+        background-color: #ffffff;
+        width: 75%;
+        padding: 15px 25px;
+        float: left;
+    }
+    .z ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .z ul li {
+        border: 1px solid #039bce;
+        padding: 0px;
+        margin-bottom: 8px;
+        background-color: #33b5e5;
+        color: #f3f3f3;
+    }
+    .z ul li a {
+        color: #f3f3f3;
+        display: block;
+        padding: 10px;
+    }
+    .z ul li:hover,
+    .z ul li:active {
+        background-color: #0099cc;
+    }
+    .z ul li a:hover,
+    .z ul li a:active {
+        color: #ffffff;
+    }
+    .yejiao {
+        margin: 8px;
+        text-align: center;
+        border: 1px solid rgb(252, 82, 53);
+        background-color: tomato;
+        color: white;
+        padding: 10px;
+    }
+    .xs {
+        opacity: 0;
+    }
+}
+
+
+/* 比较小的平板电脑响应式 */
+
+@media screen and (min-width: 436px) and (max-width: 531px) {
+    .z {
+        border-left: 1px solid #e8e7e3;
+        border-top: 1px solid #e8e7e3;
+        border-bottom: 1px solid #e8e7e3;
+        background-color: #ffffff;
+        width: 25%;
+        padding: 3px 3px;
+        float: left;
+    }
+    .y {
+        border: 1px solid #e8e7e3;
+        background-color: #ffffff;
+        width: 75%;
+        padding: 15px 25px;
+        float: left;
+    }
+    .z ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .z ul li {
+        border: 1px solid #039bce;
+        padding: 0px;
+        margin-bottom: 8px;
+        background-color: #33b5e5;
+        color: #f3f3f3;
+    }
+    .z ul li a {
+        color: #f3f3f3;
+        display: block;
+        padding: 10px;
+    }
+    .z ul li:hover,
+    .z ul li:active {
+        background-color: #0099cc;
+    }
+    .z ul li a:hover,
+    .z ul li a:active {
+        color: #ffffff;
+    }
+    .yejiao {
+        margin: 8px;
+        text-align: center;
+        border: 1px solid rgb(252, 82, 53);
+        background-color: tomato;
+        color: white;
+        padding: 10px;
+    }
+    .xs {
+        opacity: 0;
+    }
+}
+
+
+/* 手机响应式 */
+
+@media screen and (min-width: 0px) and (max-width: 435px) {
+    .z {
+        border-bottom: 1px solid #e8e7e3;
+        background-color: #ffffff;
+        width: 100%;
+    }
+    .y {
+        background-color: #ffffff;
+        width: 100%;
+        padding: 3px 10px;
+    }
+    .z ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .z ul li {
+        padding: 10px;
+        background-color: #33b5e5;
+        border-bottom: 1px solid #0099cc;
+        border-left: 1px solid #0099cc;
+        border-right: 1px solid #0099cc;
+        color: #f3f3f3;
+    }
+    .z ul li a {
+        color: #f3f3f3;
+        display: block;
+    }
+    .z ul li:hover,
+    .z ul li:active {
+        background-color: #0099cc;
+    }
+    .z ul li a:hover,
+    .z ul li a:active {
+        color: #ffffff;
+    }
+    .yejiao {
+        padding: 10px;
+        text-align: center;
+        background-color: #333333;
+        color: white;
+    }
+    .xs {
+        display: none;
+    }
+}

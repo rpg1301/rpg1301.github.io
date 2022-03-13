@@ -1,0 +1,41 @@
+/* 底部导航 */
+
+
+/* 针对电脑 */
+
+@media screen and (min-width: 769px) {
+    .di {
+        margin: 15px 25px;
+        text-align: center;
+        border: 1px solid #e8e7e3;
+        background-color: white;
+        padding: 10px;
+    }
+}
+
+
+/* 针对平板 */
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    .pd {
+        margin: 8px;
+        text-align: center;
+        border: 1px solid rgb(252, 82, 53);
+        background-color: tomato;
+        color: white;
+        padding: 10px;
+    }
+}
+
+
+/* 针对手机 */
+
+@media screen and (min-width: 0px) and (max-width: 425px) {
+    .jd {
+        padding: 10px;
+        text-align: center;
+        background-color: #333333;
+        color: white;
+        padding: 10px;
+    }
+}

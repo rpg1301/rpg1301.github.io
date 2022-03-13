@@ -1,0 +1,200 @@
+* {
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+a {
+    text-decoration: none;
+}
+
+.dhl {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.dhl li {
+    float: left;
+}
+
+.dhl li a {
+    /* transition: 0.5s; */
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dhl li a:hover {
+    background-color: #111;
+}
+
+.dhl .floatright {
+    float: right;
+}
+
+
+/* 针对电脑分辨率进行调整 */
+
+@media screen and (min-width: 769px) {
+    .dbox {
+        margin: 15px 25px;
+        padding: 0px 20px;
+        border: 1px solid #e8e7e3;
+        background-color: white;
+    }
+    a:link {
+        color: #666666;
+    }
+    a:visited {
+        color: #666666;
+    }
+    a:hover {
+        color: #333333;
+    }
+    a:active {
+        color: #333333;
+    }
+    .fy a {
+        color: black;
+        float: left;
+        padding: 11.6px 16px;
+        text-decoration: none;
+    }
+}
+
+
+/* 针对平板电脑分辨率进行调整 */
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    .pbox {
+        margin: 8px;
+        padding: 0px 15px;
+        border: 1px solid #e8e7e3;
+        background-color: white;
+    }
+    a:link {
+        color: #333333;
+    }
+    a:visited {
+        color: #333333;
+    }
+    a:hover {
+        color: #ff6347;
+    }
+    a:active {
+        color: #ff6347;
+    }
+    .fbno {
+        display: none;
+    }
+    .fy a {
+        color: black;
+        float: left;
+        padding: 11px 15.5px;
+        text-decoration: none;
+    }
+}
+
+
+/* 针对手机分辨率进行调整 */
+
+@media screen and (min-width: 0px) and (max-width: 425px) {
+    .sbox {
+        padding: 0px 10px;
+        border: 1px solid white;
+        background-color: white;
+    }
+    a {
+        color: black;
+    }
+    a:link {
+        color: black;
+    }
+    a:visited {
+        color: black;
+    }
+    a:hover {
+        color: blue;
+    }
+    a:active {
+        color: blue;
+    }
+    .fbno {
+        display: none;
+    }
+    .fy a {
+        color: black;
+        float: left;
+        padding: 8.6px 13px;
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 273px) {
+    .gan {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 200px) {
+    .fbd {
+        display: none;
+    }
+}
+
+.wz {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.wz li a:link {
+    color: #1e1e1e;
+}
+
+.wz li a:visited {
+    color: #1e1e1e;
+}
+
+.wz li a:hover {
+    color: tomato;
+}
+
+.wz li a:active {
+    color: tomato;
+}
+
+
+/* 分页 */
+
+.fy {
+    display: inline-block;
+    font-size: 12px;
+}
+
+.fy a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.fy a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+.zw {
+    line-height: 26px;
+}.y h4 {
+	color: #F00;
+}
+.y h4 {
+	color: #000;
+}

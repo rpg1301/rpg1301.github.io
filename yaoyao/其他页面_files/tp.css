@@ -1,0 +1,25 @@
+/* 电脑 */
+
+@media screen and (min-width: 769px) {
+    .tp {
+        width: 80%;
+    }
+}
+
+
+/* 平板 */
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    .tp {
+        width: 100%;
+    }
+}
+
+
+/* 手机 */
+
+@media screen and (min-width: 0px) and (max-width: 425px) {
+    .tp {
+        width: 100%;
+    }
+}
