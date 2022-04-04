@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS教程第二版</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/yanse.css">
+    <link rel="stylesheet" href="css/shili.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+</head>
+<style>
+    .google {
+        font-family: "Sofia";
+        font-size: 22px;
+    }
+</style>
+
+<body>
+    <h4>CSS语法</h4>
+    <p>CSS 规则集 (rule-set) 由选择器和声明块组成：</p>
+    <img src="img/cssyufa.png" class="img">
+    <h4>示例</h4>
+    <p>在此例中，所有 &lt;p&gt; 元素都将居中对齐，并带有红色文本颜色：</p>
+    <p class="ym">
+        p {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;color:red;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br />
+        }
+    </p>
+    <h4>例子解释</h4>
+    <ul>
+        <li>p 是CSS 中的<b>选择器</b> (它指向要设置样式的 HTML元素：&lt;p&gt;)。</li>
+        <li>color 是属性，red 是属性值</li>
+        <li>text-align 是属性，center 是属性值</li>
+    </ul>
+    <h4>CSS 元素选择器</h4>
+    <p>元素选择器根据元素名称来选择 HTML 元素</p>
+    <p><b>实例</b></p>
+    <p>本实例将页面上所有 &lt;p&gt; 元素都将居中对齐，并带有红色文本颜色：</p>
+    <p class="ym">
+        p {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;color: red;<br />
+        }
+    </p>
+    <h4>CSS ID选择器</h4>
+    <p>id 选择器使用 HTML 元素的 id 属性来选择特定元素。</p>
+    <p>元素的 id 在页面中是唯一的，因此 id 选择器用于选择一个唯一的元素！</p>
+    <p>要选择具有特定 id 的元素，请写一个井号 (#) ，后跟该元素的 id。</p>
+    <p><b>实例</b></p>
+    <p>这条 CSS 规则将应用于 id="para1" 的 HTML 元素：</p>
+    <p class="ym">
+        #para1 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;color: red;<br />
+        }
+    </p>
+    <h4>CSS 类选择器</h4>
+    <p>类选择器选择特定 class 属性的 HTML 元素。</p>
+    <p>如需选择拥有特定 class 的元素，请写一个句点 (.) 字符，后面跟类名。</p>
+    <p><b>实例</b></p>
+    <p>在此例中，所有带有 class="center" 的 HTML 元素将为红色且居中对其：</p>
+    <p class="ym">
+        .center {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;color: red;<br />
+        }
+    </p>
+    <p>还可以指定只有特定的 HTML 元素会受类的影响。</p>
+    <p><b>实例</b></p>
+    <p>在这个例子中，只有具有 class="center" 的 &lt;p&gt; 元素会居中对齐：</p>
+    <p class="ym">
+        p.center {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;color: red;<br />
+        }
+    </p>
+    <p>HTML 元素也可以引用多个类。</p>
+    <p><b>实例</b></p>
+    <p>在这个例子中，&lt;p&gt; 元素将根据 class="center" 和 class="large" 进行样式设置：</p>
+    <p class="ym">
+        &lt;p class="center large"&gt;这个段落引用两个类。&lt;/p&gt;
+    </p>
+    <p> <span class="zy">注意：</span> 类名不能以数字开头！</p>
+    <h4>CSS 通用选择器</h4>
+    <p>通用选择器 (*) 选择页面上的所有的 HTML 元素。</p>
+    <p><b>实例</b></p>
+    <p>下面的 CSS 规则会影响页面上的每个 HTML 元素：</p>
+    <p class="ym">
+        * {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;color: blue;<br />
+        }
+    </p>
+    <h4>CSS 分组选择器</h4>
+    <p>分组选择器选取所有具有相同样式定义的 HTML 元素。</p>
+    <p>请看下面的 CSS 代码（h1、h2 和 p 元素具有相同的样式定义）：</p>
+    <p class="ym">
+        h1 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;color: red;<br />
+        }<br />
+        <br />
+        h2 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;color: red;<br />
+        }<br />
+        <br />
+        p {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;color: red;<br />
+        }
+    </p>
+    <p>最好对选择器进行分组，以最大程度地缩减代码。</p>
+    <p>如需对选择器进行分组，请用逗号来分隔每个选择器。</p>
+    <p><b>实例</b></p>
+    <p>在这个例子中，我们对上述代码中的选择器进行分组：</p>
+    <p class="ym">
+        h1, h2, p {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;color: red;<br />
+        }
+    </p>
+    <h4>所有简单的 CSS 选择器</h4>
+    <table class="table">
+        <tr>
+            <th>选择器</th>
+            <th>例子</th>
+            <th>例子描述</th>
+        </tr>
+        <tr>
+            <td>.class</td>
+            <td>.intro</td>
+            <td>选取所有 class="intro" 的元素。</td>
+        </tr>
+        <tr>
+            <td>#id</td>
+            <td>#firstname</td>
+            <td>选取 id="firstname" 的那个元素。</td>
+        </tr>
+        <tr>
+            <td>*</td>
+            <td>*</td>
+            <td>选取所有元素。</td>
+        </tr>
+        <tr>
+            <td>element</td>
+            <td>p</td>
+            <td>选取所有 &lt;p&gt; 元素。</td>
+        </tr>
+        <tr>
+            <td>element,element,..</td>
+            <td>div, p</td>
+            <td>选取所有 &lt;div&gt; 元素和所有 &lt;p&gt; 元素。</td>
+        </tr>
+    </table>
+    <h4>三种使用 CSS 的方法</h4>
+    <p>有三种插入样式表的方法：</p>
+    <ul>
+        <li>外部 CSS</li>
+        <li>内部 CSS</li>
+        <li>行内 CSS</li>
+    </ul>
+    <h4>CSS 注释</h4>
+    <p>注释用于解释代码，以后在您编辑源代码时可能会有所帮助。</p>
+    <p>浏览器会忽略注释。</p>
+    <p>位于 &lt;style&gt; 元素内的 CSS 注释，以 /* 开始，以 */ 结束:</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        /* 这是一条注释 */<br />
+        p {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;color: red;<br />
+        }
+    </p>
+    <p>您可以在代码中的任何位置添加注释：</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        p {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;color: red; &nbsp;&nbsp;&nbsp;&nbsp; /* 把文本设置为红色 */<br />
+        }
+    </p>
+    <p>注释能横跨多行：</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        /* 这是<br />
+        一条多行的<br />
+        注释 */<br />
+        <br />
+        p {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;color:red<br />
+        }
+    </p>
+    <h4>HTML 和 CSS 注释</h4>
+    <p>从 HTML 教程中，您学习到可以使用 &lt;!--...--&gt; 语法在 HTML 源代码中添加注释。</p>
+    <p class="ym">
+        &lt;!-- 这个段落将是黑色的 --&gt;<br />
+        &lt;p&gt;Hello World!&lt;/p&gt;
+    </p>
+    <h4>CSS 颜色名</h4>
+    <p>在 CSS 中，可以使用颜色名称来指定颜色：</p>
+    <img src="img/yanse.png" class="img">
+    <h4>CSS 背景色</h4>
+    <p>您可以为 HTML 元素设置背景色：</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        &lt;h1 style="background-color:DodgerBlue;"&gt;China&lt;/h1&gt;<br />
+        &lt;p style="background-color:Tomato;"&gt;China is a great country!&lt;/p&gt;
+    </p>
+    <h4>CSS 文本颜色</h4>
+    <p>您可以设置文本的颜色：</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        &lt;h1 style="color:Tomato;"&gt;China&lt;/h1&gt;<br />
+        &lt;p style="color:DodgerBlue;"&gt;China is a great country!&lt;/p&gt;<br />
+        &lt;p style="color:MediumSeaGreen;"&gt;China, officially the People's Republic of China...&lt;/p&gt;
+    </p>
+    <h4>CSS 边框颜色</h4>
+    <p>您可以设置边框的颜色：</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        &lt;h1 style="border:2px solid Tomato;"&gt;Hello World&lt;/h1&gt;<br />
+        &lt;h1 style="border:2px solid DodgerBlue;"&gt;Hello World&lt;/h1&gt;<br />
+        &lt;h1 style="border:2px solid Violet;"&gt;Hello World&lt;/h1&gt;
+    </p>
+    <h4>CSS 颜色值</h4>
+    <p>在 CSS 中，还可以使用 RGB 值、HEX 值、HSL 值、RGBA 值或者 HSLA 值来指定颜色：</p>
+    <ul>
+        <li>rgb(255, 99, 71)</li>
+        <li>#ff6347</li>
+        <li>hsl(9, 100%, 64%)</li>
+    </ul>
+    <p>与颜色名 "Tomato" 等效，但是透明度为 50%：</p>
+    <ul>
+        <li>rgba(255, 99, 71, 0.5)</li>
+        <li>hsla(9, 100%, 64%, 0.5)</li>
+    </ul>
+    <h4>CSS background-color</h4>
+    <p> <span class="dm">background-color</span> 属性指定元素的背景色。</p>
+    <p><b>实例</b></p>
+    <p>页面的背景色设置如下：</p>
+    <p class="ym">
+        body {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;background-color: lightblue;<br />
+        }
+    </p>
+    <p>通过 CSS，颜色通常由以下方式指定：</p>
+    <ul>
+        <li>有效的颜色名称 - 比如 "red"</li>
+        <li>十六进制值 - 比如 "#ff0000"</li>
+        <li>RGB 值 - 比如 "rgb(255,0,0)"</li>
+    </ul>
+    <h4>其他元素</h4>
+    <p>您可以为任何 HTML 元素设置背景颜色：</p>
+    <p><b>实例</b></p>
+    <p>在这里，&lt;h1&gt;、&lt;p&gt; 和 &lt;div&gt; 元素将拥有不同的背景色：</p>
+    <p class="ym">
+        h1 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;background-color: green;<br />
+        }<br />
+        <br />
+        div {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;background-color: lightblue;<br />
+        }<br />
+        <br />
+        p {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;background-color: yellow;<br />
+        }
+    </p>
+    <h4>不透明度 / 透明度</h4>
+    <p>opacity 属性指定元素的不透明度/透明度。取值范围为 0.0 - 1.0。值越低，越透明：</p>
+    <img src="img/toumingdu.png" class="img">
+    <p><b>实例</b></p>
+    <p class="ym">
+        div {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;background-color: green;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;opacity: 0.3;<br />
+        }
+    </p>
+    <p> <span class="zy">注意：</span> 使用 <b class="zy">opacity</b> 属性为元素的背景添加透明度时，其所有子元素都继承相同的透明度。这可能会使完全透明的元素内的文本难以阅读。
+    </p>
+    <h4>使用 RGBA 的透明度</h4>
+    <p>如果您不希望对子元素应用不透明度，例如上面的例子，请使用 <b>RGBA</b> 颜色值。下面的例子设置背景色而不是文本的不透明度：</p>
+    <img src="img/RGBA.png" class="img">
+    <p><b>实例</b></p>
+    <p class="ym">
+        div {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;background: rgba(0, 128, 0, 0.3) /* 30% 不透明度的绿色背景 */<br />
+        }
+    </p>
+    <h4>CSS 背景图像</h4>
+    <p> <span class="dm">background-images</span> 属性指定用作元素背景的图像。</p>
+    <p>默认情况下，图像会重复，以覆盖整个元素。</p>
+    <p><b>实例</b></p>
+    <p>页面的背景图像可以像这样设置：</p>
+    <p class="ym">
+        body {<br />
+        background-color: url("paper.gif");<br />
+        }
+    </p>
+    <p> <span class="zy">注意：</span> 使用背景图像时，请使用不会干扰文本的图像。</p>
+    <p>还可以为特定元素设置背景图像，例如 &lt;p&gt; 元素：</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        p {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;background-image: url("paper.gif");<br />
+        }
+    </p>
+    <h4>CSS background-repeat</h4>
+    <p>默认情况下， <span class="dm">background-image</span> 属性在水平和垂直方向上都重复图像。</p>
+    <p>如果上面的图像仅在水平方向重复 ( <span class="dm">background-repeat: repeat-x;</span> )，则背景看起来会更好：</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        body {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;background-image: url("gradient_bg.png");<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;background-repeat: repeat-x;<br />
+        }
+    </p>
+    <p> <span class="ts">提示：</span> 如需垂直重复图像，请设置 <span class="dm">background-repeat: repeat-y;</span> </p>
+    <h4>CSS 边框属性</h4>
+    <p>CSS <span class="dm">border</span> 属性允许您指定元素边框的样式、宽度和颜色。</p>
+    <img src="img/biank.png" class="img">
+    <h4>CSS 边框样式</h4>
+    <p> <span class="dm">border-style</span> 属性指定要显示的边框类型。</p>
+    <p>允许以下值：</p>
+    <ul>
+        <li> <span class="dm">dotted</span> - 定义点线边框</li>
+        <li> <span class="dm">dashed</span> - 定义虚线边框</li>
+        <li> <span class="dm">solid</span> - 定义实线边框</li>
+        <li> <span class="dm">double</span> - 定义双边框</li>
+        <li> <span class="dm">groove</span> - 定义 3D 坡口边框。效果取决于 border-color 值</li>
+        <li> <span class="dm">ridge</span> - 定义 3D 脊线边框。效果取决于 border-color 值</li>
+        <li> <span class="dm">inset</span> - 定义 3D inset 边框。效果取决于 border-color 值</li>
+        <li> <span class="dm">outset</span> - 定义 3D outset 边框。效果取决于 border-color 值</li>
+        <li> <span class="dm">none</span> - 定义无边框</li>
+        <li> <span class="dm">hidden</span> 定义隐藏边框</li>
+    </ul>
+    <p> <span class="dm">border-style</span> 属性可以设置一到四个值（用于上边框、右边框、下边框和左边框）。</p>
+    <p><b>实例</b></p>
+    <p>不同边框</p>
+    <p class="ym">
+        p.dotted {border-style: dotted;}<br />
+        p.dashed {border-style: dashed;}<br />
+        p.solid {border-style: solid;}<br />
+        p.double {border-style: double;}<br />
+        p.groove {border-style: groove;}<br />
+        p.ridge {border-style: ridge;}<br />
+        p.inset {border-style: inset;}<br />
+        p.outset {border-style: outset;}<br />
+        p.none {border-style: none;}<br />
+        p.hidden {border-style: hidden;}<br />
+        p.mix {border-style: dotted dashed solid double;}
+    </p>
+    <h4>CSS 边框宽度</h4>
+    <p> <span class="dm">border-width</span> 属性指定四个边框的宽度。</p>
+    <p>可以将宽度设置为特定大小（以 px、pt、cm、em 计），也可以使用以下三个预定义值之一：thin、medium 或 thick：</p>
+    <p><b>实例</b></p>
+    <p>不同的边框宽度：</p>
+    <p class="ym">
+        p.one {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border-style: solid;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border-width: 5px;<br />
+        }<br />
+        <br />
+        p.two {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border-style: solid;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border-width: medium;<br />
+        }<br />
+        <br />
+        p.three {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border-style: dotted;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border-width: 2px;<br />
+        } <br />
+        <br />
+        p.four {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border-style: dotted;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border-width: thick;<br />
+        }
+    </p>
+    <h4>特定边的宽度</h4>
+    <p> <span class="dm">border-width</span> 属性可以设置一到四个值（用于上边框、右边框、下边框和左边框）：</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        p.one {
+        &nbsp;&nbsp;&nbsp;&nbsp;border-style: solid;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border-width: 5px 20px; /* 上边框和下边框为 5px，其他边为 20px */<br />
+        }<br />
+        <br />
+        p.two {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border-style: solid;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border-width: 20px 5px; /* 上边框和下边框为 20px，其他边为 5px */<br />
+        }<br />
+        <br />
+        p.three {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border-style: solid;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border-width: 25px 10px 4px 35px; /* 上边框 25px，右边框 10px，下边框 4px，左边框 35px */<br />
+        }
+    </p>
+    <h4>CSS 边框颜色</h4>
+    <p> <span class="dm">border-color</span> 属性用于设置四个边框的颜色。</p>
+    <p><b>实例</b></p>
+    <p>演示不同的边框颜色：</p>
+    <p class="ym">
+        p.one {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border-style: solid;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border-color: red;<br />
+        }<br />
+        <br />
+        p.two {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border-style: solid;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border-color: green;<br />
+        }<br />
+        <br />
+        p.three {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border-style: dotted;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border-color: blue;<br />
+        }
+    </p>
+    <h4>特定边框的颜色</h4>
+    <p> <span class="dm">border-color</span> 属性可以设置一到四个值（用于上边框、右边框、下边框和左边框）。</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        p.one {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border-style: solid;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border-color: red green blue yellow; /* 上红、右绿、下蓝、左黄 */<br />
+        }
+    </p>
+    <h4>CSS 边框 - 单独的边</h4>
+    <p><b>实例</b></p>
+    <p class="ym">
+        p {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border-top-style: dotted;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border-right-style: solid;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border-bottom-style: dotted;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border-left-style: solid;<br />
+        }
+    </p>
+    <p>上例的结果与此相同：</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        p {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border-style: dotted solid;<br />
+        }
+    </p>
+    <ul>
+        <li>如有四个值，第一个为上 第二个为右 第三个为下 第四个为左</li>
+        <li>如有三个值，第一个为上 第二个为左右 第三个为下</li>
+        <li>如有两个值，第一个上下 第二个左右</li>
+        <li>一个值的话为上下左右</li>
+    </ul>
+    <h4>CSS Border - 简写属性</h4>
+    <p> <span class="dm">border</span> 属性是以下各个边框属性的简写属性：</p>
+    <ul>
+        <li> <span class="dm">border-width</span> </li>
+        <li> <span class="dm">border-style</span> (必须)</li>
+        <li> <span class="dm">border-color</span> </li>
+    </ul>
+    <p><b>实例</b></p>
+    <p class="ym">
+        p {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border: 5px solid red;<br />
+        }
+    </p>
+    <p><b>左边框</b></p>
+    <p class="ym">
+        p {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border-left: 6px solid red;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;background-color: lightgrey;<br />
+        }
+    </p>
+    <p>结果：</p>
+    <p class="左边框">左边框</p>
+    <p><b>下边框</b></p>
+    <p class="ym">
+        p {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border-bottom: 6px solid red;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;background-color: lightgrey;<br />
+        }
+    </p>
+    <p>结果：</p>
+    <p class="下边框">下边框</p>
+    <h4>CSS 圆角边框</h4>
+    <p> <span class="dm">border-radius</span> 属性用于向元素添加圆角边框：</p>
+    <p style="border: 3px solid red; padding: 10px; text-align: center;">普通边框</p>
+    <p style="border: 3px solid red; padding: 10px; text-align: center; border-radius: 5px;">圆角边框</p>
+    <p style="border: 3px solid red; padding: 10px; text-align: center; border-radius: 8px;">圆角边框</p>
+    <p style="border: 3px solid red; padding: 10px; text-align: center; border-radius: 12px;">圆角边框</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        p {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border: 2px solid red;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 5px;<br />
+        }
+    </p>
+    <h4>CSS 外边距</h4>
+    <p>CSS <span class="dm">margin</span> 属性用于在任何定义的边框之外，为元素周围创建空间。</p>
+    <h4>Margin - 单独的边</h4>
+    <p>CSS 拥有用于为元素的每一侧指定外边距的属性：</p>
+    <ul>
+        <li> <span class="dm">margin-top</span> </li>
+        <li> <span class="dm">margin-right</span> </li>
+        <li> <span class="dm">margin-bottom</span> </li>
+        <li> <span class="dm">margin-left</span> </li>
+    </ul>
+    <p>所有外边距属性都可以设置以下值：</p>
+    <ul>
+        <li>auto - 浏览器来计算外边距</li>
+        <li>length - 以 px、pt、cm 等单位指定外边距</li>
+        <li>% - 指定以包含元素宽度的百分比计的外边距</li>
+        <li>inherit - 指定应从父元素继承外边距</li>
+    </ul>
+    <p> <span class="ts">提示：</span> 允许负值。</p>
+    <p><b>实例</b></p>
+    <p>为 &lt;p&gt; 元素的所有四个边设置不同的外边距：</p>
+    <p class="ym">
+        p {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;margin-top: 100px;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom: 100px;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;margin-right: 150px;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;margin-left: 80px;<br />
+        }
+    </p>
+    <h4>Margin - 简写属性</h4>
+    <p>为了缩减代码，可以在一个属性中指定所有外边距属性。</p>
+    <p> <span class="dm">margin</span> 属性是以下各外边距属性的简写属性：</p>
+    <ul>
+        <li> <span class="dm">margin-top</span> </li>
+        <li> <span class="dm">margin-right</span> </li>
+        <li> <span class="dm">margin-bottom</span> </li>
+        <li> <span class="dm">margin-left</span> </li>
+    </ul>
+    <p><b>实例</b></p>
+    <p>margin 简写属性设置四个值：</p>
+    <p class="ym">
+        p {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;margin: 25px 50px 75px 100px;<br />
+        }
+    </p>
+    <p>如果 <span class="dm">margin</span> 属性设置三个值：</p>
+    <ul>
+        <li>margin: 25px 50px 75px;
+            <ul>
+                <li>上外边距是 25px</li>
+                <li>右和左边距是 50px</li>
+                <li>下外边距是 75px</li>
+            </ul>
+        </li>
+    </ul>
+    <p><b>实例</b></p>
+    <p>使用已设置三个值的 margin 简写属性：</p>
+    <p class="ym">
+        p {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;margin: 25px 50px 75px;<br />
+        }
+    </p>
+    <p>如果 <span class="dm">margin</span> 属性设置了一个值：</p>
+    <ul>
+        <li>margin: 25px;<ul>
+                <li>所有四个外边距都是 25px</li>
+            </ul>
+        </li>
+    </ul>
+    <p><b>实例</b></p>
+    <p>使用设置一个值的 margin 简写属性：</p>
+    <p class="ym">
+        p {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;margin: 25px;<br />
+        }
+    </p>
+    <h4>auto 值</h4>
+    <p>您可以将 margin 属性设置为 <span class="dm">auto</span> ，以使元素在其容器中水平居中。</p>
+    <p>然后，该元素将占据指定的宽度，并且剩余空间将在左右边界之间平均分配。</p>
+    <p><b>实例</b></p>
+    <p>使用 <span class="dm">margin: auto</span> ：</p>
+    <p class="ym">
+        div {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;width: 300px;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;margin: auto;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border: 1px solid red;<br />
+        }
+    </p>
+    <h4>inherit 值</h4>
+    <p>本例使 &lt;p class="ex1"&gt; 元素的左外边距继承自父元素（&lt;div&gt;）：</p>
+    <p><b>实例</b></p>
+    <p>使用 inherit 值：</p>
+    <p class="ym">
+        div {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border: 1px solid red;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;margin-left: 100px;<br />
+        }<br />
+        <br />
+        p.ex1 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;margin-left: inherit;<br />
+        }
+    </p>
+    <h4>外边距合并</h4>
+    <p>外边距合并（叠加）是一个相当简单的概念。但是，在实践中对网页进行布局时，它会造成许多混淆。</p>
+    <p>简单地说，外边距合并指的是，当两个垂直外边距相遇时，它们将形成一个外边距。合并后的外边距的高度等于两个发生合并的外边距的高度中的较大者。</p>
+    <p>当一个元素出现在另一个元素上面时，第一个元素的下外边距与第二个元素的上外边距会发生合并。请看下图：</p>
+    <img src="img/heb-1.gif" class="img">
+    <p>当一个元素包含在另一个元素中时（假设没有内边距或边框把外边距分隔开），它们的上和/或下外边距也会发生合并。请看下图：</p>
+    <img src="img/heb-2.gif" class="img">
+    <p>尽管看上去有些奇怪，但是外边距甚至可以与自身发生合并。</p>
+    <p>假设有一个空元素，它有外边距，但是没有边框或填充。在这种情况下，上外边距与下外边距就碰到了一起，它们会发生合并：</p>
+    <img src="img/heb-3.gif" class="img">
+    <p>如果这个外边距遇到另一个元素的外边距，它还会发生合并：</p>
+    <img src="img/heb-4.gif" class="img">
+    <p>这就是一系列的段落元素占用空间非常小的原因，因为它们的所有外边距都合并到一起，形成了一个小的外边距。</p>
+    <p>外边距合并初看上去可能有点奇怪，但是实际上，它是有意义的。以由几个段落组成的典型文本页面为例。第一个段落上面的空间等于段落的上外边距。如果没有外边距合并，后续所有段落之间的外边距都将是相邻上外边距和下外边距的和。这意味着段落之间的空间是页面顶部的两倍。如果发生外边距合并，段落之间的上外边距和下外边距就合并在一起，这样各处的距离就一致了。
+    </p>
+    <img src="img/heb-5.gif" class="img">
+    <p><b>注释：</b>只有普通文档流中块框的垂直外边距才会发生外边距合并。行内框、浮动框或绝对定位之间的外边距不会合并。</p>
+    <div style="border: 1px solid; padding: 30px; text-align: center;">此元素的内边距为 30px。</div>
+    <h4>CSS 内边距</h4>
+    <p>CSS <span class="dm">padding</span> 属性用于在任何定义的边界内的元素内容周围生成空间。</p>
+    <p>通过 CSS，您可以完全控制内边距（填充）。有一些属性可以为元素的每一侧（上、右、下和左侧）设置内边距。</p>
+    <p>Padding - 单独的边</p>
+    <p>CSS 拥有用于为元素的每一侧指定内边距的属性：</p>
+    <ul>
+        <li>padding-top</li>
+        <li>padding-right</li>
+        <li>padding-bottom</li>
+        <li>padding-left</li>
+    </ul>
+    <p>所有内边距属性都可以设置以下值：</p>
+    <ul>
+        <li>length - 以 px、pt、cm 等单位指定内边距</li>
+        <li>% - 指定以包含元素宽度的百分比计的内边距</li>
+        <li>inherit - 指定应从父元素继承内边距</li>
+    </ul>
+    <p> <span class="ts">提示：</span> 不允许负值。</p>
+    <p><b>实例</b></p>
+    <p>为 &lt;div&gt; 元素的所有四个边设置不同的内边距：</p>
+    <p class="ym">
+        div {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;padding-top: 50px;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;padding-right: 30px;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;padding-bottom: 50px;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;padding-left: 80px;<br />
+        }
+    </p>
+    <h4>Padding - 简写属性</h4>
+    <p>为了缩减代码，可以在一个属性中指定所有内边距属性。</p>
+    <p> <span class="dm">padding</span> 属性是以下各内边距属性的简写属性：</p>
+    <ul>
+        <li>padding-top</li>
+        <li>padding-right</li>
+        <li>padding-bottom</li>
+        <li>padding-left</li>
+    </ul>
+    <p><b>工作原理是这样的：</b></p>
+    <p>如果 <span class="dm">padding</span> 属性有四个值：</p>
+    <ul>
+        <li>padding: 25px 50px 75px 100px;
+            <ul>
+                <li>上内边距是 25px</li>
+                <li>右内边距是 50px</li>
+                <li>下内边距是 75px</li>
+                <li>左内边距是 100px</li>
+            </ul>
+        </li>
+    </ul>
+    <p><b>实例</b></p>
+    <p>使用设置了四个值的 padding 简写属性：</p>
+    <p class="ym">
+        div {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;padding: 25px 50px 75px 100px;<br />
+        }
+    </p>
+    <p>如果 <span class="dm">padding</span> 属性设置了三个值：</p>
+    <ul>
+        <li>padding: 25px 50px 75px;
+            <ul>
+                <li>上内边距是 25px</li>
+                <li>右和左内边距是 50px</li>
+                <li>下内边距是 75px</li>
+            </ul>
+        </li>
+    </ul>
+    <p><b>实例</b></p>
+    <p>使用设置了三个值的 padding 简写属性：</p>
+    <p class="ym">
+        div {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;padding: 25px 50px 75px;<br />
+        }
+    </p>
+    <p>如果 <span class="dm">padding</span> 属性设置了两个值：</p>
+    <ul>
+        <li>padding: 25px 50px;
+            <ul>
+                <li>上和下内边距是 25px</li>
+                <li>又和左内边距是 50px</li>
+            </ul>
+        </li>
+    </ul>
+    <p><b>实例</b></p>
+    <p>使用设置了两个值的 padding 简写属性：</p>
+    <p class="ym">
+        div {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;padding: 25px 50px;<br />
+        }
+    </p>
+    <p>如果 <span class="dm">padding</span> 属性设置了一个值：</p>
+    <ul>
+        <li>padding: 25px;
+            <ul>
+                <li>所有四个内边距都是25px</li>
+            </ul>
+        </li>
+    </ul>
+    <p><b>实例</b></p>
+    <p>使用设置了一个值的 padding 简写属性：</p>
+    <p class="ym">
+        div {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;padding: 25px;<br />
+        }
+    </p>
+    <h4>内边距和元素宽度</h4>
+    <p>CSS <span class="dm">width</span> 属性指定元素内容区域的宽度。内容区域是元素（盒模型）的内边距、边框和外边距内的部分。</p>
+    <p>因此，如果元素拥有指定的宽度，则添加到该元素的内边距会添加到元素的总宽度中。这通常是不希望的结果。</p>
+    <p><b>实例</b></p>
+    <p>在这里，&lt;div&gt; 元素的宽度为 300px。但是，&lt;div&gt; 元素的实际宽度将是 350px（300px + 左内边距 25px + 右内边距 25px）：</p>
+    <p class="ym">
+        div {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;width: 300px;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;padding: 25px;<br />
+        }
+    </p>
+    <p>若要将宽度保持为 300px，无论填充量如何，那么您可以使用 <span class="dm">box-sizing</span> 属性。这将导致元素保持其宽度。如果增加内边距，则可用的内容空间会减少。</p>
+    <p><b>实例</b></p>
+    <p>使用 box-sizing 属性将宽度保持为 300px，无论填充量如何：</p>
+    <p class="ym">
+        div {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;width: 300px;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;padding: 25px;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;box-sizing: border-box;<br />
+        }
+    </p>
+    <p></p>
+    <div style="border: 1px solid; padding: 10px; width: 100%; box-sizing: border-box; text-align: center;">此元素的宽度为
+        100％。</div>
+    <h4>CSS 设置高度和宽度</h4>
+    <p><span class="dm">height</span> 和 <span class="dm">width</span> 属性用于设置元素的高度和宽度。</p>
+    <p>height 和 width 属性不包括内边距、边框或外边距。它设置的是元素内边距、边框以及外边距内的区域的高度或宽度。</p>
+    <h4>CSS 高度和宽度值</h4>
+    <p> <span class="dm">height</span> 和 <span class="dm">width</span> 属性可设置如下值：</p>
+    <ul>
+        <li> <span class="dm">auto</span> - 默认。浏览器计算高度和宽度。</li>
+        <li> <span class="dm">Length</span> - 以 px、cm 等定义高度/宽度。</li>
+        <li> <span class="dm">%</span> - 以包含块的百分比定义高度/宽度。</li>
+        <li> <span class="dm">initial</span> - 将高度/宽度设置为默认值。</li>
+        <li> <span class="dm">inherit</span> - 从其父值继承高度/宽度。</li>
+    </ul>
+    <h4>CSS 高度和宽度实例</h4>
+    <p><b>实例</b></p>
+    <p>设置 &lt;div&gt; 元素的高度和宽度：</p>
+    <p class="ym">
+        div {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;height: 200px;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;width: 50%;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;background-color: powderblue;<br />
+        }
+    </p>
+    <p><b>实例</b></p>
+    <p>设置另一个 &lt;div&gt; 元素的高度和宽度：</p>
+    <p class="ym">
+        div {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;height: 100px;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;width: 500px;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;background-color: powderblue;<br />
+        }
+    </p>
+    <p><span class="zy">注意：</span>请记住， <span class="dm"><b>height</b></span> 和 <span class="dm"><b>width</b></span>
+        属性不包括内边距、边框或外边距！它们设置的是元素的内边距、边框和外边距的区域的高度/宽度！</p>
+    <h4>设置 max-width</h4>
+    <p> <span class="dm">max-width</span> 属性用于设置元素的最大宽度。</p>
+    <p>可以用长度值（例如 px、cm 等）或包含块的百分比（％）来指定 max-width（最大宽度），也可以将其设置为 none（默认值。意味着没有最大宽度）。</p>
+    <p>当浏览器窗口小于元素的宽度（500px）时，会发生之前那个 <span class="dm">&lt;div&gt;</span> 的问题。然后，浏览器会将水平滚动条添加到页面。</p>
+    <p>在这种情况下，使用 <span class="dm">max-width</span> 能够改善浏览器对小窗口的处理。</p>
+    <p><span class="ts">提示：</span>将浏览器窗口拖动到小于500px的宽度，以查看两个 div 之间的区别！</p>
+    <p><b>注释：</b>max-width 属性的值将覆盖 width（宽度）。</p>
+    <p>这个 &lt;div&gt; 元素的高度为 100 像素，最大宽度为 500 像素：</p>
+    <p class="ym">
+        div {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;max-width: 500px;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;height: 100px;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;background-color: powderblue;<br />
+        }
+    </p>
+    <h4>CSS 框模型</h4>
+    <p>对不同部分的说明：</p>
+    <ul>
+        <li><b>内容</b> - 框的内容，其中显示文本和图像。</li>
+        <li><b>内边距</b> - 清除内容周围的区域。内边距是透明的。</li>
+        <li><b>边框</b> - 围绕内边距和内容的边框。</li>
+        <li><b>外边距</b> - 清除边界外的区域。外边距是透明的。</li>
+    </ul>
+    <p>内边距、边框和外边距都是可选的，默认值是零。但是，许多元素将由用户代理样式表设置外边距和内边距。可以通过将元素的 margin 和 padding
+        设置为零来覆盖这些浏览器样式。这可以分别进行，也可以使用通用选择器对所有元素进行设置：</p>
+    <p class="ym">
+        * {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;margin: 0;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;padding: 0;<br />
+        }
+    </p>
+    <p>在 CSS 中，width 和 height 指的是内容区域的宽度和高度。增加内边距、边框和外边距不会影响内容区域的尺寸，但是会增加元素框的总尺寸。</p>
+    <p><b>实例</b></p>
+    <p>演示框模型：</p>
+    <p class="ym">
+        div {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;width: 300px;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border: 15px solid green;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;padding: 50px;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;margin: 20px;<br />
+        }
+    </p>
+    <h4>元素的宽度和高度</h4>
+    <p>为了在所有浏览器中正确设置元素的宽度和高度，您需要了解框模型如何工作。</p>
+    <p><b class="zy">重要提示：</b>使用 CSS 设置元素的 width 和 height 属性时，只需设置内容区域的宽度和高度。要计算元素的完整大小，还必须把内边距、边框和外边距加起来。</p>
+    <p><b>实例</b></p>
+    <p>&lt;div&gt; 元素的总宽度将是 350px：</p>
+    <p class="ym">
+        div {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;width: 320px;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;padding: 10px;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border: 5px solid gray;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;margin: 0; <br />
+        }
+    </p>
+    <p>计算如下：</p>
+    <p class="ym">
+        320px(宽度)<br />
+        + 20px（左+右内边距）<br />
+        + 10px（左+右边框）<br />
+        + 0px（左+右外边距）<br />
+        = 350px
+    </p>
+    <h4>CSS 轮廓</h4>
+    <p>轮廓是在元素周围绘制的一条线，在边框之外，以凸显元素。</p>
+    <p>CSS 拥有如下轮廓属性：</p>
+    <ul>
+        <li><span class="dm">outline-style</span></li>
+        <li><span class="dm">outline-color</span></li>
+        <li><span class="dm">outline-width</span></li>
+        <li><span class="dm">outline-offset</span></li>
+        <li><span class="dm">outline</span></li>
+    </ul>
+    <p><span class="zy">注意：</span>轮廓与边框不同！不同之处在于：轮廓是在元素边框之外绘制的，并且可能与其他内容重叠。同样，轮廓也不是元素尺寸的一部分；元素的总宽度和高度不受轮廓线宽度的影响。</p>
+    <h4>CSS 轮廓样式</h4>
+    <p>outline-style 属性指定轮廓的样式，并可设置如下值：</p>
+    <ul>
+        <li><span class="dm">dotted</span> - 定义点状的轮廓。</li>
+        <li><span class="dm">dashed</span> - 定义虚线的轮廓。</li>
+        <li><span class="dm">solid</span> - 定义实线的轮廓。</li>
+        <li><span class="dm">double</span> - 定义双线的轮廓。</li>
+        <li><span class="dm">groove</span> - 定义 3D 凹槽轮廓。</li>
+        <li><span class="dm">ridge</span> - 定义 3D 凸槽轮廓。</li>
+        <li><span class="dm">inset</span> - 定义 3D 凹边轮廓。</li>
+        <li><span class="dm">outset</span> - 定义 3D 凸边轮廓。</li>
+        <li><span class="dm">none</span> - 定义无轮廓。</li>
+        <li><span class="dm">hidden</span> - 定义隐藏的轮廓。</li>
+    </ul>
+    <p>下例展示了不同的 outline-style 值：</p>
+    <p><b>实例</b></p>
+    <p>演示不同的轮廓样式：</p>
+    <p class="ym">
+        p.dotted {outline-style: dotted;}<br />
+        p.dashed {outline-style: dashed;}<br />
+        p.solid {outline-style: solid;}<br />
+        p.double {outline-style: double;}<br />
+        p.groove {outline-style: groove;}<br />
+        p.ridge {outline-style: ridge;}<br />
+        p.inset {outline-style: inset;}<br />
+        p.outset {outline-style: outset;}
+    </p>
+    <p>结果：</p>
+    <p style="outline: red dotted; padding: 10px;">点状轮廓。</p>
+    <p style="outline: red dashed; padding: 10px;">虚线轮廓。</p>
+    <p style="outline: red solid; padding: 10px;">实线轮廓。</p>
+    <p style="outline: red double; padding: 10px;">双线轮廓。</p>
+    <p style="outline: red groove; padding: 10px;">3D 凹槽轮廓。此效果取决于 outline-color 值。</p>
+    <p style="outline: red ridge; padding: 10px;">3D 凸槽轮廓。此效果取决于 outline-color 值。</p>
+    <p style="outline: red inset; padding: 10px;">3D 凹边轮廓。此效果取决于 outline-color 值。</p>
+    <p style="outline: red outset; padding: 10px;">3D 凸边轮廓。此效果取决于 outline-color 值。</p>
+    <p><span class="zy">注意：</span>除非设置了 <span class="dm">outline-style</span> 属性，否则其他轮廓属性（在下一章中将详细介绍）都不会有任何作用！</p>
+    <p>CSS 轮廓宽度</p>
+    <p><span class="dm">outline-width</span> 属性指定轮廓的宽度，并可设置如下值之一：</p>
+    <ul>
+        <li>thin (通常为 1px)</li>
+        <li>medium (通常为 3px)</li>
+        <li>thick (通常为 5px)</li>
+        <li>特定尺寸 (以 px、pt、cm、em 计)</li>
+    </ul>
+    <p>下例展示了一些不同宽度的轮廓：</p>
+    <p style="border: 1px solid black; outline: thin red solid; padding: 10px;">细的轮廓。</p>
+    <p style="border: 1px solid black; outline: medium red solid; padding: 10px;">中等的轮廓。</p>
+    <p style="border: 1px solid black; outline: thick red solid; padding: 10px;">粗的轮廓。</p>
+    <p style="border: 1px solid black; outline: 4px red solid; padding: 10px;">4 像素的粗轮廓。</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        p.ex1 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border: 1px solid black;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;outline-style: solid;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;outline-color: red;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;outline-width: thin;<br />
+        }<br />
+        <br />
+        p.ex2 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border: 1px solid black;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;outline-style: solid;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;outline-color: red;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;outline-width: medium;<br />
+        }<br />
+        <br />
+        p.ex3 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border: 1px solid black;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;outline-style: solid;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;outline-color: red;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;outline-width: thick;<br />
+        }<br />
+        <br />
+        p.ex4 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border: 1px solid black;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;outline-style: solid;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;outline-color: red;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;outline-width: 4px;<br />
+        }
+    </p>
+    <h4>CSS 轮廓颜色</h4>
+    <p> <span class="dm">outline-color</span> 属性用于设置轮廓的颜色。</p>
+    <p>可以通过以下方式设置颜色：</p>
+    <ul>
+        <li>name - 指定颜色名，比如 "red"</li>
+        <li>HEX - 指定十六进制值，比如 "#ff0000"</li>
+        <li>RGB - 指定 RGB 值，比如 "rgb(255,0,0)"</li>
+        <li>HSL - 指定 HSL 值，比如 "hsl(0, 100%, 50%)"</li>
+        <li>invert - 执行颜色反转（确保轮廓可见，无论是什么颜色背景）</li>
+    </ul>
+    <p>invert - 执行颜色反转（确保轮廓可见，无论是什么颜色背景）</p>
+    <p style="border: 2px solid black; outline: 4px red solid; padding: 10px; text-align: center;">红色的实线轮廓。</p>
+    <p style="border: 2px solid black; outline: 4px blue dotted; padding: 10px; text-align: center;">蓝色的点状轮廓。</p>
+    <p style="border: 2px solid black; outline: 4px grey outset; padding: 10px; text-align: center;">灰色的凸边轮廓。</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        p.ex1 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border: 2px solid black;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;outline-style: solid;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;outline-color: red;<br />
+        }<br />
+        <br />
+        p.ex2 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border: 2px solid black;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;outline-style: dotted;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;outline-color: blue;<br />
+        }<br />
+        <br />
+        p.ex3 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border: 2px solid black;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;outline-style: outset;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;outline-color: grey;<br />
+        }
+    </p>
+    <h4>HEX 值</h4>
+    <p>您也可以使用十六进制值（HEX）指定轮廓颜色：</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        p.ex1 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;outline-style: solid;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;outline-color: #ff0000; /* 红色 */<br />
+        }
+    </p>
+    <h4>反转颜色</h4>
+    <p>下例使用 <span class="dm">outline-color: invert</span>，执行了颜色反转。这样可以确保无论颜色背景如何，轮廓都是可见的：</p>
+    <p style="border: 2px solid yellow; outline: 4px solid; outline-color: invert; padding: 10px; text-align: center;">
+        反转颜色的实线轮廓。</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        p.ex1 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border: 1px solid yellow;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;outline-style: solid;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;outline-color: invert;<br />
+        }
+    </p>
+    <h4>CSS Outline - 简写属性</h4>
+    <p><span class="dm">outline</span> 属性是用于设置以下各个轮廓属性的简写属性：</p>
+    <ul>
+        <li><span class="dm">outline-width</span></li>
+        <li><span class="dm">outline-style</span> (必须)</li>
+        <li><span class="dm">outline-color</span></li>
+    </ul>
+    <p>从上面的列表中，<span class="dm">outline</span> 属性可指定一个、两个或三个值。值的顺序无关紧要。</p>
+    <p>下例展示了用简写的 <span class="dm">outline</span> 属性指定的一些轮廓：</p>
+    <p style="outline: dashed; padding: 10px; text-align: center;">虚线轮廓。</p>
+    <p style="outline: dotted red; padding: 10px; text-align: center;">红色的虚线轮廓。</p>
+    <p style="outline: 5px solid yellow; padding: 10px; text-align: center;">5 像素的黄色实线轮廓。</p>
+    <p style="outline: thick ridge pink; padding: 10px; text-align: center;">粗的粉色凸槽轮廓。</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        p.ex1 {outline: dashed;}<br />
+        p.ex2 {outline: dotted red;}<br />
+        p.ex3 {outline: 5px solid yellow;}<br />
+        p.ex4 {outline: thick ridge pink;}
+    </p>
+    <h4>CSS 轮廓偏移</h4>
+    <p><span class="dm">outline-offset</span> 属性在元素的轮廓与边框之间添加空间。元素及其轮廓之间的空间是透明的。</p>
+    <p>下例指定边框边缘外 25px 的轮廓：</p>
+    <p style="border: 1px solid black; outline: 1px solid red; margin: 50px; outline-offset: 25px;">此段落的边框外有 25px 的轮廓。
+    </p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        p {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;margin: 50px;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border: 1px solid black;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;outline: 1px solid red;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;outline-offset: 25px;<br />
+        }
+    </p>
+    <p>下例显示元素与其轮廓之间的空间是透明的：</p>
+    <p
+        style="border: 1px solid black; outline: 1px solid red; margin: 50px; outline-offset: 25px; background-color: yellow;">
+        本段在边框边缘外的轮廓为 25px。</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        p {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;margin: 30px;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;background: yellow;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;border: 1px solid black;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;outline: 1px solid red;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;outline-offset: 25px;<br />
+        }
+    </p>
+    <h4>文本颜色</h4>
+    <p><span class="dm">color</span> 属性用于设置文本的颜色。颜色由以下值指定：</p>
+    <ul>
+        <li>颜色名 - 比如 "red"</li>
+        <li>十六进制值 - 比如 "#ff0000"</li>
+        <li>RGB 值 - 比如 "rgb(255,0,0)"</li>
+    </ul>
+    <p><b>实例</b></p>
+    <p class="ym">
+        body {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;color: blue;<br />
+        }<br />
+        <br />
+        h1 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;color: green;<br />
+        }
+    </p>
+    <p><span class="ts">提示：</span> 对于 W3C compliant CSS：如果您定义了 <span class="dm">color</span> 属性，则还必须定义 <span
+            class="dm">background-color</span> 属性。</p>
+    <h4>文本颜色和背景色</h4>
+    <p>在本例中，我们定义了 <span class="dm">background-color</span> 属性和 <span class="dm">color</span> 属性：</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        body {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;background-color: lightgrey;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;color: blue;<br />
+        }<br />
+        <br />
+        h1 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;background-color: black;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;color: white;<br />
+        }
+    </p>
+    <h4>文本对齐</h4>
+    <p><span class="dm">text-align</span> 属性用于设置文本的水平对齐方式。</p>
+    <p>文本可以左对齐或右对齐，或居中对齐。</p>
+    <p>下例展示了居中对齐以及左右对齐的文本（如果文本方向是从左到右，则默认为左对齐；如果文本方向是从右到左，则默认是右对齐）：</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        h1 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br />
+        }<br />
+        <br />
+        h2 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;text-align: left;<br />
+        }<br />
+        <br />
+        h3 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;text-align: right;<br />
+        }
+    </p>
+    <p>当 <span class="dm">text-align</span> 属性设置为 "justify" 后，将拉伸每一行，以使每一行具有相等的宽度，并且左右边距是直的（就像在杂志和报纸中）</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        div {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;text-align: justify;<br />
+        }
+    </p>
+    <h4>文本方向</h4>
+    <p><span class="dm">direction</span> 和 <span class="dm">unicode-bidi</span> 属性可用于更改元素的文本方向：</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        p {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;direction: rtl;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;unicode-bidi: bidi-override;<br />
+        }
+    </p>
+    <h4>垂直对齐</h4>
+    <p><span class="dm">vertical-align</span> 属性设置元素的垂直对齐方式。</p>
+    <p>本例演示如何设置文本中图像的垂直对齐方式：</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        img.top {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;vertical-align: top;<br />
+        }<br />
+        <br />
+        img.middle {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;vertical-align: middle;<br />
+        }<br />
+        <br />
+        img.bottom {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;vertical-align: bottom;<br />
+        }
+    </p>
+    <h4>文字装饰</h4>
+    <p><span class="dm">text-decoration</span> 属性用于设置或删除文本装饰。</p>
+    <p><span class="dm">text-decoration: none;</span> 通常用于从链接上删除下划线：</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        a {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;<br />
+        }
+    </p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        h1 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: overline;<br />
+        }<br />
+        <br />
+        h2 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: line-through;<br />
+        }<br />
+        <br />
+        h3 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: underline;<br />
+        }
+    </p>
+    <p><b>注释：</b>建议不要在非链接文本加下划线，因为这经常会使读者感到困惑。</p>
+    <h4>文本转换</h4>
+    <p><span class="dm">text-transform</span> 属性用于指定文本中的大写和小写字母。</p>
+    <p>它可用于将所有内容转换为大写或小写字母，或将每个单词的首字母大写：</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        p.uppercase {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;text-transform: uppercase;<br />
+        }<br />
+        <br />
+        p.lowercase {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;text-transform: lowercase;<br />
+        }<br />
+        <br />
+        p.capitalize {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;text-transform: capitalize;<br />
+        }
+    </p>
+    <h4>文字缩进</h4>
+    <p><span class="dm">text-indent</span> 属性用于指定文本第一行的缩进：</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        p {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;text-indent: 50px;<br />
+        }
+    </p>
+    <h4>字母间距</h4>
+    <p><span class="dm">letter-spacing</span> 属性用于指定文本中字符之间的间距。</p>
+    <p>下例演示如何增加或减少字符之间的间距：</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        h1 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;letter-spacing: 3px;<br />
+        }<br />
+        <br />
+        h2 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;letter-spacing: -3px;<br />
+        }
+    </p>
+    <h4>行高</h4>
+    <p><span class="dm">line-height</span> 属性用于指定行之间的间距：</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        p.small {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;line-height: 0.8;<br />
+        }<br />
+        <br />
+        p.big {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;line-height: 1.8;<br />
+        }
+    </p>
+    <h4>字间距</h4>
+    <p><span class="dm">word-spacing</span> 属性用于指定文本中单词之间的间距。</p>
+    <p>下例演示如何增加或减少单词之间的间距：</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        h1 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;word-spacing: 10px;<br />
+        }<br />
+        <br />
+        h2 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;word-spacing: -5px;<br />
+        }
+    </p>
+    <h4>空白</h4>
+    <p><span class="dm">white-space</span> 属性指定元素内部空白的处理方式。</p>
+    <p>此例演示如何禁用元素内的文本换行：</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        p {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;white-space: nowrap;<br />
+        }
+    </p>
+    <h4>文本阴影</h4>
+    <p><b>实例</b></p>
+    <p class="ym">
+        h1 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;text-shadow: 2px 2px 5px red;<br />
+        }
+    </p>
+    <p>为您的网站选择正确的字体很重要！</p>
+    <h4>一些字体的例子</h4>
+    <ul>
+        <li><span style="font-size:150%;font-family:'Times New Roman',serif">Times New Roman</span></li>
+        <li><span style="font-size:150%;font-family:Georgia,serif">Georgia</span></li>
+        <li><span style="font-size:150%;font-family:Garamond,serif">Garamond</span></li>
+        <li><span style="font-size:150%;font-family:Arial,sans-serif">Arial</span></li>
+        <li><span style="font-size:150%;font-family:Verdana,sans-serif">Verdana</span></li>
+        <li><span style="font-size:150%;font-family:Helvetica,sans-serif">Helvetica</span></li>
+        <li><span style="font-size:150%;font-family:'Courier New',monospace">Courier New</span></li>
+        <li><span style="font-size:150%;font-family:'Lucida Console',monospace">Lucida Console</span></li>
+        <li><span style="font-size:150%;font-family:Monaco,monospace">Monaco</span></li>
+        <li><span style="font-size:150%;font-family:'Brush Script MT',cursive">Brush Script MT</span></li>
+        <li><span style="font-size:150%;font-family:'Lucida Handwriting',cursive">Lucida Handwriting</span></li>
+        <li><span style="font-size:150%;font-family:Copperplate,fantasy">Copperplate</span></li>
+        <li><span style="font-size:150%;font-family:Papyrus,fantasy">Papyrus</span></li>
+    </ul>
+    <p>具体字体样式请看源码。</p>
+    <h4>字体样式</h4>
+    <p><span class="dm">font-style</span> 属性主要用于指定斜体文本。</p>
+    <p>此属性可设置三个值：</p>
+    <ul>
+        <li>normal - 文字正常显示</li>
+        <li>italic - 文本以斜体显示</li>
+        <li>oblique - 文本为“倾斜”（倾斜与斜体非常相似，但支持较少）</li>
+    </ul>
+    <p><b>实例</b></p>
+    <p class="ym">
+        p.normal {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;font-style: normal;<br />
+        }<br />
+        <br />
+        p.italic {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;font-style: italic;<br />
+        }<br />
+        <br />
+        p.oblique {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;font-style: oblique;<br />
+        }
+    </p>
+    <h4>字体粗细</h4>
+    <p><span class="dm">font-weight</span> 属性指定字体的粗细：</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        p.normal {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;font-weight: normal;<br />
+        }<br />
+        <br />
+        p.thick {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;font-weight: bold;<br />
+        }
+    </p>
+    <h4>字体变体</h4>
+    <p><span class="dm">font-variant</span> 属性指定是否以 small-caps 字体（小型大写字母）显示文本。</p>
+    <p>在 small-caps 字体中，所有小写字母都将转换为大写字母。但是，转换后的大写字母的字体大小小于文本中原始大写字母的字体大小。</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        p.normal {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;font-variant: normal;<br />
+        }<br />
+        <br />
+        p.small {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;font-variant: small-caps;<br />
+        }
+    </p>
+    <h4>字体大小</h4>
+    <p><span class="dm">font-size</span> 属性设置文本的大小。</p>
+    <h4>以像素设置字体大小</h4>
+    <p>使用像素设置文本大小可以完全控制文本大小：</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        h1 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;font-size: 40px;<br />
+        }<br />
+        <br />
+        h2 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;font-size: 30px;<br />
+        }<br />
+        <br />
+        p {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;font-size: 14px;<br />
+        }
+    </p>
+    <p><span class="ts">提示：</span>如果您使用了像素，则仍然可以使用缩放工具来调整整个页面的大小。</p>
+    <h4>用 em 设置字体大小</h4>
+    <p><b>实例</b></p>
+    <p class="ym">
+        h1 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;font-size: 2.5em; /* 40px/16=2.5em */<br />
+        }<br />
+        <br />
+        h2 {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;font-size: 1.875em; /* 30px/16=1.875em */<br />
+        }<br />
+        <br />
+        p {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;font-size: 0.875em; /* 14px/16=0.875em */<br />
+        }
+    </p>
+    <h4>响应式字体大小</h4>
+    <p>可以使用 <span class="dm">vw</span> 单位设置文本大小，它的意思是“视口宽度”（"viewport width"）。</p>
+    <p>这样，文本大小将遵循浏览器窗口的大小，请调整浏览器窗口的大小，以查看字体大小如何缩放：</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        &lt;h1 style="font-size:10vw"&gt;Hello World&lt;/h1&gt;
+    </p>
+    <h4>谷歌字体</h4>
+    <p>如果您不想使用 HTML 中的任何标准字体，则可以使用 Google Fonts API 向页面添加数百种其他字体。</p>
+    <p>只需添加一个样式表链接并引用您选择的字体系列：</p>
+    <p><b>实例</b></p>
+    <p class="google">Sofia Font</p>
+    <h4>字体属性</h4>
+    <p>为了缩短代码，也可以在一个属性中指定所有单个字体属性。</p>
+    <p><span class="dm">font</span> 属性是以下属性的简写属性：</p>
+    <ul>
+        <li><span class="dm">font-style</span></li>
+        <li><span class="dm">font-variant</span></li>
+        <li><span class="dm">font-weight</span></li>
+        <li><span class="dm">font-size/line-height</span></li>
+        <li><span class="dm">font-family</span></li>
+    </ul>
+    <p><b>实例</b></p>
+    <p>使用简写声明设置一些字体属性：</p>
+    <p class="ym">
+        p.a {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;font: 20px Arial, sans-serif;<br />
+        }<br />
+        <br />
+        p.b {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;font: italic small-caps bold 12px/30px Georgia, serif;<br />
+        }
+    </p>
+    <p><b class="zy">注意：</b> <b class="dm">font-size</b> 和 <b class="dm">font-family</b> 的值是必需的。如果缺少其他值之一，则会使用其默认值。</p>
+    <p>通过 CSS，可以用不同的方式设置链接的样式。</p>
+    <h4>设置链接样式</h4>
+    <p>链接可以使用任何 CSS 属性（例如 <span class="dm">color</span>、<span class="dm">font-family</span>、<span
+            class="dm">background</span> 等）来设置样式。</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        a {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;color: hotpink;<br />
+        }
+    </p>
+    <p>此外，可以根据链接处于什么状态来设置链接的不同样式。</p>
+    <p>四种链接状态分别是：</p>
+    <ul>
+        <li><span class="dm">a:link</span> - 正常的，未访问的链接</li>
+        <li><span class="dm">a:visited</span> - 用户访问过的链接</li>
+        <li><span class="dm">a:hover</span> - 用户将鼠标悬停在链接上时</li>
+        <li><span class="dm">a:active</span> - 链接被点击时</li>
+    </ul>
+    <p><b>实例</b></p>
+    <p class="ym">
+        /* 未被访问的链接 */<br />
+        a:link {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;color: red;<br />
+        }<br />
+        <br />
+        /* 已被访问的链接 */<br />
+        a:visited {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;color: green;<br />
+        }<br />
+        <br />
+        /* 将鼠标悬停在链接上 */<br />
+        a:hover {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;color: hotpink;<br />
+        }<br />
+        <br />
+        /* 被选择的链接 */<br />
+        a:active {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;color: blue;<br />
+        }
+    </p>
+    <p>如果为多个链接状态设置样式，请遵循如下顺序规则：</p>
+    <ul>
+        <li>a:hover 必须 a:link 和 a:visited 之后</li>
+        <li>a:active 必须在 a:hover 之后</li>
+    </ul>
+    <h4>文本装饰</h4>
+    <p><span class="dm">text-decoration</span> 属性主要用于从链接中删除下划线：</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        a:link {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;<br />
+        }<br />
+        <br />
+        a:visited {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;<br />
+        }<br />
+        <br />
+        a:hover {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: underline;<br />
+        }<br />
+        <br />
+        a:active {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: underline;<br />
+        }
+    </p>
+    <h4>背景色</h4>
+    <p><span class="dm">background-color</span> 属性可用于指定链接的背景色：</p>
+    <p><b>实例</b></p>
+    <p class="ym">
+        a:link {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;background-color: yellow;<br />
+        }<br />
+        <br />
+        a:visited {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;background-color: cyan;<br />
+        }<br />
+        <br />
+        a:hover {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;background-color: lightgreen;<br />
+        }<br />
+        <br />
+        a:active {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;background-color: hotpink;<br />
+        }
+    </p>
+    <h4>链接按钮</h4>
+    <p>本例演示了一个更高级的例子，其中我们组合了多个 CSS 属性，将链接显示为框/按钮：</p>
+    <h4>实例</h4>
+    <p class="ym">
+        a:link, a:visited {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;background-color: #f44336;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;color: white;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;padding: 14px 25px;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;text-align: center; <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;display: inline-block;<br />
+        }<br />
+        <br />
+        a:hover, a:active {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;background-color: red;<br />
+        }
+    </p>
+    <div style="box-sizing:border-box; height: 270px;">
+        <div style="float: left; width:50%; box-sizing: border-box;">
+            <h2>无序列表：</h2>
+
+            <ul style="list-style:circle">
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Coca Cola</li>
+            </ul>
+
+            <ul style="list-style:square">
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Coca Cola</li>
+            </ul>
+        </div>
+
+        <div style="float: right; width:50%; box-sizing: border-box;">
+            <h2>有序列表：</h2>
+
+            <ol style="list-style:decimal">
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Coca Cola</li>
+            </ol>
+
+            <ol style="list-style:upper-roman">
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Coca Cola</li>
+            </ol>
+        </div>
+    </div>
+    <h4>HTML 列表和 CSS 列表属性</h4>
+    <p>在 HTML 中，列表主要有两种类型：</p>
+    <ul>
+        <li>无序列表 (&lt;ul&gt;) - 列表项用的是项目符号标记</li>
+        <li>有序列表 (&lt;ol&gt;) - 列表项用的是数字或字母标记</li>
+    </ul>
+    <p>CSS 列表属性使您可以：</p>
+    <ul>
+        <li>为有序列表设置不同的列表项标记</li>
+        <li>为无序列表设置不同的列表项标记</li>
+        <li>将图像设置为列表项标记</li>
+        <li>为列表和列表项添加背景色</li>
+    </ul>
+</body>
+
+</html>
