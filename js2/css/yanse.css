@@ -1,0 +1,30 @@
+.z {
+    color: #dd0000;
+}
+
+.d {
+    color: #df143c;
+    background-color: #f1f1f1;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-family: Consolas;
+}
+
+.d2 {
+    color: #df143c;
+    font-family: Consolas;
+}
+
+.t {
+    color: #ff9955;
+}
+
+button a {
+    color: #000000;
+    text-decoration: none;
+}
+
+hr {
+    border-width: 0;
+    margin: 10px 0px;
+}
